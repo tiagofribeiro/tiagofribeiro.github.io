@@ -4,7 +4,7 @@
     --main: #3b9636;
     --bg: #c8dac6;
     --text: #374637;
-    --button: #78b174;
+    --button: #2e452c;
 }
 
 body {
@@ -63,6 +63,6 @@ svg {
     padding: 20px;
     border-radius: 28px;
     text-decoration: none;
-    color: var(--text);
+    color: var(--bg);
     background: var(--button);
 }
