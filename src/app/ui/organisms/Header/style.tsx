@@ -14,6 +14,9 @@ const Content = styled.div`
     display: inline-flex;
     flex: 1;
     max-width: 1100px;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
 `;
 
 export { Frame, Content }
