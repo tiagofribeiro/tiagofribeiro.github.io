@@ -23,4 +23,15 @@ const Item = styled(Link)`
     }
 `;
 
-export { Frame, Item }
+const DropFrame = styled.div`
+    display: flex;
+    row-gap: 8px;
+`;
+
+const DropItem = styled(Link) <{ dropOpen: boolean }>`
+    display: flex;
+    height: 20px;
+    padding: 12px;
+`;
+
+export { Frame, Item, DropFrame, DropItem }

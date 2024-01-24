@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     :root {
         --font-color: #FFFFFF;
-        --background-color: #242424;
+        --background-color: #202020;
     }
 
     * {

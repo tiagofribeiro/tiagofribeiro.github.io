@@ -1,8 +1,8 @@
 import { KnownTarget } from "styled-components/dist/types";
 
 export interface TextTypes {
-    title?: boolean,
     as?: KnownTarget;
+    title?: boolean,
     primary?: boolean;
     maxW?: number;
     marginX?: number;

@@ -1,5 +1,5 @@
 const ExperiencePage = () => {
-    return ( <></> );
+    return ( <>Experiências!</> );
 }
  
 export default ExperiencePage;
