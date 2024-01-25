@@ -1,58 +1,19 @@
-'use client'
+import { Frame } from "./style";
+import { NavMenuTypes } from "./types";
+import NavItem from "../NavItem";
 
-import { useState } from "react";
-
-import ICONS from "@/app/lib/constants/icons";
-import { MENU_ITEMS } from "@/app/lib/constants/menu";
-
-import { DropFrame, DropItem, Frame, Item } from "./style";
-import Text from "../../atoms/Text";
-
-const NavMenu = () => {
-    const [aboutOpen, setAboutOpen] = useState(false);
-
-    const setFunctions = (index: number) => {
-        if (index == 0) {
-            return {
-                onPointerEnter: () => setAboutOpen(true),
-                onPointerLeave: () => setTimeout(() => setAboutOpen(false), 300),
-            }
-        }
-    }
-
-    const setIconStyle = (index: number) => {
-        if (index == 0) {
-            return {
-                fill: aboutOpen ? '#00CE78' : undefined,
-                style: {
-                    transform: aboutOpen ? 'rotate(180deg)' : '',
-                    transition: 'transform 300ms ease',
-                },
-            }
-        }
-    }
+const NavMenu = ({mobile, visible, items}: NavMenuTypes) => {
 
     return (
         <Frame>
-            {MENU_ITEMS.map((item, index) => {
+            {items.map((item, index) => {
                 return (
-                    <Item
+                    <NavItem
                         key={index}
-                        href={item.route}
-                        {...setFunctions(index)}
-                    >
-                        <Text>
-                            {item.text}
-                        </Text>
-                        {
-                            item.subItems &&
-                            <ICONS.arrow
-                                width={12}
-                                height={12}
-                                {...setIconStyle(index)}
-                            />
-                        }
-                    </Item>
+                        text={item.text}
+                        route={item.route}
+                        subItems={item.subItems}
+                    />
                 )
             })}
         </Frame >

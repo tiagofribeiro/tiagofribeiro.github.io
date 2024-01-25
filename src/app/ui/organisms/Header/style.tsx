@@ -7,6 +7,7 @@ const Frame = styled.div`
     flex: 1;
     height: 88px;
     justify-content: center;
+    border-bottom: solid 2px #00CE78;
     background-color: #1A1A1A;
 `;
 

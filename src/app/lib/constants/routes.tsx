@@ -1,10 +1,6 @@
-interface ItemTypes {
-    text: string;
-    route: string;
-    subItems?: ItemTypes[];
-}
+import { NavItemTypes } from "@/app/ui/molecules/NavItem/types";
 
-const ABOUT_ITEMS: ItemTypes[] = [
+const ABOUT_ITEMS: NavItemTypes[] = [
     {
         text: 'Perfil',
         route: '/about/profile',
@@ -15,7 +11,7 @@ const ABOUT_ITEMS: ItemTypes[] = [
     },
 ]
 
-const MENU_ITEMS: ItemTypes[] = [
+const MENU_ITEMS: NavItemTypes[] = [
     {
         text: 'Sobre',
         route: '#',

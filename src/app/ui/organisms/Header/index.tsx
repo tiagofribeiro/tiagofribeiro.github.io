@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { MENU_ITEMS } from "@/app/lib/constants/routes";
+
 import { Content, Frame } from "./style"
 import NavMenu from "../../molecules/NavMenu";
 
@@ -17,7 +19,11 @@ const Header = () => {
                         alt={'Logo'}
                     />
                 </Link>
-                <NavMenu />
+                <NavMenu
+                    mobile={false}
+                    visible={true}
+                    items={MENU_ITEMS}
+                />
             </Content>
         </Frame>
     );

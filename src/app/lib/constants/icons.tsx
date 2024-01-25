@@ -1,6 +1,11 @@
+import { SVGProps } from "react";
 import ArrowSvg from "../../../../public/icons/arrow";
 
-const ICONS = {
+interface IconsTypes {
+    [key: string]: React.JSX.ElementType;
+}
+
+const ICONS: IconsTypes = {
     arrow: ArrowSvg
 }
 

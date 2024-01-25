@@ -1,6 +1,7 @@
 import * as React from "react"
 import { SVGProps } from "react"
-const ArrowSvg = (props: SVGProps<SVGSVGElement>) => (
+
+const ArrowSvg = (props: SVGProps<SVGSVGElement>) => 
   <svg
     width="1em"
     height="1em"
@@ -18,5 +19,5 @@ const ArrowSvg = (props: SVGProps<SVGSVGElement>) => (
       </clipPath>
     </defs>
   </svg>
-)
+
 export default ArrowSvg
