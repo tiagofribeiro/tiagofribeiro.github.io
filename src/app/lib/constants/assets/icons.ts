@@ -1,5 +1,5 @@
-import { SVGProps } from "react";
-import ArrowSvg from "../../../../public/icons/arrow";
+
+import ArrowSvg from "../../../../../public/icons/arrow";
 
 interface IconsTypes {
     [key: string]: React.JSX.ElementType;

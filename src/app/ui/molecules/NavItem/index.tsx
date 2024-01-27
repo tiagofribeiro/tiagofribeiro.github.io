@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
-import ICONS from "@/app/lib/constants/icons";
+import ICONS from "@/app/lib/constants/assets/icons";
 
-import { Frame, Item, SubFrame, SubItem } from "./style"
+import { Container, Item, SubContainer, SubItem } from "./style"
 import Text from "../../atoms/Text";
 import { NavItemTypes } from "./types";
 
@@ -12,7 +12,7 @@ const NavItem = ({ mobile, text, route, subItems }: NavItemTypes) => {
     const [hover, setHover] = useState(false);
 
     return (
-        <Frame
+        <Container
             onPointerEnter={() => setHover(true)}
             onPointerLeave={() => setHover(false)}
         >
@@ -22,9 +22,9 @@ const NavItem = ({ mobile, text, route, subItems }: NavItemTypes) => {
                     <ICONS.arrow
                         width={12}
                         height={12}
-                        fill={hover ? '#00CE78' : undefined}
+                        fill={hover ? 'var(--green-300)' : undefined}
                         style={{
-                            transform: hover ? 'rotate(180deg)' : '',
+                            transform: hover ? 'rotate(180deg)' : 'none',
                             transition: '300ms',
                             transitionDelay: hover ? '0ms' : '500ms',
                         }}
@@ -32,7 +32,7 @@ const NavItem = ({ mobile, text, route, subItems }: NavItemTypes) => {
                 }
             </Item>
             {subItems &&
-                <SubFrame $hover={hover}>
+                <SubContainer $hover={hover}>
                     {subItems.map((item, index) => {
                         return (
                             <SubItem key={index} href={item.route}>
@@ -40,9 +40,9 @@ const NavItem = ({ mobile, text, route, subItems }: NavItemTypes) => {
                             </SubItem>
                         )
                     })}
-                </SubFrame>
+                </SubContainer>
             }
-        </Frame >
+        </Container >
     );
 }
 

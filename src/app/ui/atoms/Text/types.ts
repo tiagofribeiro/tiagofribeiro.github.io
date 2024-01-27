@@ -8,6 +8,7 @@ export interface TextTypes {
     marginX?: number;
     marginY?: number;
     alignment?: string;
+    fontSize?: number;
     color?: string;
     children: React.ReactNode;
 }
@@ -23,6 +24,7 @@ export interface TextTitleTypes {
 
 export interface TextBodyTypes extends TextTitleTypes {
     $primary?: boolean;
+    $fontSize?: number;
 }
 
 

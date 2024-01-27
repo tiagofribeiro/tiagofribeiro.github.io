@@ -3,13 +3,18 @@ import Link from "next/link";
 
 import { MENU_ITEMS } from "@/app/lib/constants/routes";
 
-import { Content, Frame } from "./style"
+import { Container } from "./style"
 import NavMenu from "../../molecules/NavMenu";
+import Frame from "../../atoms/Frame";
 
 const Header = () => {
     return (
-        <Frame>
-            <Content>
+        <Container>
+            <Frame
+                paddingX={24}
+                align={'center'}
+                justify={'space-between'}
+            >
                 <Link href={'/'}>
                     <Image
                         priority
@@ -24,8 +29,8 @@ const Header = () => {
                     visible={true}
                     items={MENU_ITEMS}
                 />
-            </Content>
-        </Frame>
+            </Frame>
+        </Container>
     );
 }
 

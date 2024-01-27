@@ -1,7 +1,7 @@
 import { Body, Header } from "./style"
 import { TextTypes } from "./types";
 
-const Text = ({ title, as, primary, maxW, marginX, marginY, alignment, color, children }: TextTypes) => {
+const Text = ({ title, as, primary, maxW, marginX, marginY, alignment, fontSize, color, children }: TextTypes) => {
   return title ?
         <Header
           as={as}
@@ -18,6 +18,7 @@ const Text = ({ title, as, primary, maxW, marginX, marginY, alignment, color, ch
           $marginX={marginX}
           $marginY={marginY}
           $alignment={alignment}
+          $fontSize={fontSize}
           $color={color}>
           {children}</Body>
 }

@@ -12,7 +12,7 @@ const Header = styled.h1<TextTitleTypes>(({
     $color
 }) => `
     max-width: ${$maxW}%;
-    margin: ${$marginY} ${$marginX};
+    margin: ${$marginY}px ${$marginX}px;
     text-align: ${$alignment};
     color: ${$color};
 
@@ -58,18 +58,25 @@ const Header = styled.h1<TextTitleTypes>(({
     `};
 `);
 
-const Body = styled.span<TextBodyTypes>(({ 
-    $primary, 
+const Body = styled.span<TextBodyTypes>(({
+    $primary,
+    $fontSize,
     $maxW = 100,
     $marginX = 0,
     $marginY = 0,
     $alignment = 'left',
     $color
- }) => `
+}) => `
     max-width: ${$maxW}%;
-    margin: ${$marginY} ${$marginX};
+    margin: ${$marginY}px ${$marginX}px;
     text-align: ${$alignment};
-    font-size: ${$primary ? '18' : '16'}px;
+    
+    ${$fontSize ?
+        `font-size: ${$fontSize}px;`
+        :
+        `font-size: ${$primary ? '18' : '16'}px;`
+    }
+    
     font-weight: ${$primary ? 500 : 400};
     color: ${$color};
 
