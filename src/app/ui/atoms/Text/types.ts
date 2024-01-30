@@ -2,6 +2,7 @@ import { KnownTarget } from "styled-components/dist/types";
 
 export interface TextTypes {
     as?: KnownTarget;
+    bold?: boolean;
     title?: boolean,
     primary?: boolean;
     maxW?: number;
@@ -23,6 +24,7 @@ export interface TextTitleTypes {
 }
 
 export interface TextBodyTypes extends TextTitleTypes {
+    $bold?: boolean;
     $primary?: boolean;
     $fontSize?: number;
 }

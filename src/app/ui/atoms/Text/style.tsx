@@ -40,25 +40,26 @@ const Header = styled.h1<TextTitleTypes>(({
     `};
 
     ${as === 'h3' && `
-        font-size: 36px;
-        font-weight: bold;
-
-        @media screen and (max-width: 768px) {
-            font-size: 28px;
-        }
-    `};
-
-    ${as === 'h4' && `
         font-size: 32px;
-        font-weight: 400;
+        font-weight: bold;
 
         @media screen and (max-width: 768px) {
             font-size: 24px;
         }
     `};
+
+    ${as === 'h4' && `
+        font-size: 28px;
+        font-weight: 400;
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+        }
+    `};
 `);
 
 const Body = styled.span<TextBodyTypes>(({
+    $bold,
     $primary,
     $fontSize,
     $maxW = 100,
@@ -70,18 +71,19 @@ const Body = styled.span<TextBodyTypes>(({
     max-width: ${$maxW}%;
     margin: ${$marginY}px ${$marginX}px;
     text-align: ${$alignment};
+    font-size: ${$primary ? '16' : '14'}px;
+    font-weight: ${$bold ? 700 : 400};
     
-    ${$fontSize ?
-        `font-size: ${$fontSize}px;`
-        :
-        `font-size: ${$primary ? '18' : '16'}px;`
-    }
-    
-    font-weight: ${$primary ? 500 : 400};
-    color: ${$color};
+    ${$fontSize && `font-size: ${$fontSize}px;`}
+    ${$color && `color: ${$color}`};
 
     @media screen and (max-width: 768px) {
-        font-size: ${$primary ? '16px' : '14px'};
+        font-size: 14px;
+
+        ${$fontSize == 60 && `font-size: 40px`};
+        ${$fontSize == 48 && `font-size: 30px`};
+        ${$fontSize == 32 && `font-size: 24px`};
+        ${$fontSize == 28 && `font-size: 20px`};
     }
 `);
 

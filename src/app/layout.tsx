@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
-import Header from './ui/organisms/Header'
 import StyledComponentsRegistry from './lib/global/registry'
 import { GlobalStyles } from './lib/global/styles'
 
@@ -14,11 +13,10 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html>
-      <body className={font.className}>
+    <html className={font.className}>
+      <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
-          <Header />
           {children}
         </StyledComponentsRegistry>
       </body>

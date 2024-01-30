@@ -9,7 +9,7 @@ const Container = styled.div`
     justify-content: center;
 `;
 
-const Item = styled(Link)<NavItemStyledTypes>`
+const Item = styled(Link)<NavItemStyledTypes>(({ $hover }) => `
     display: flex;
     height: 20px;
     padding: 12px;
@@ -20,13 +20,13 @@ const Item = styled(Link)<NavItemStyledTypes>`
     text-decoration: none;
     transition: 400ms;
 
-    ${({$hover}) => $hover && `
+    ${$hover && `
         color: var(--green-300);
         background-color: var(--green-highlight);
     `}
-`;
+`);
 
-const SubContainer = styled.div<NavItemStyledTypes>`
+const SubContainer = styled.div<NavItemStyledTypes>(({ $hover }) => `
     display: flex;
     visibility: hidden;
     flex-direction: column;
@@ -40,13 +40,13 @@ const SubContainer = styled.div<NavItemStyledTypes>`
     transform: scale(0);
     transform-origin: top;
 
-    ${({$hover}) => $hover && `
+    ${$hover && `
         visibility: visible;
         transition-delay: 0ms;
         transform: scale(1);
     `}
     
-`;
+`);
 
 const SubItem = styled(Link)`
     display: flex;
