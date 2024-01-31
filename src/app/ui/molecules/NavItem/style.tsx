@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import styled from "styled-components";
-import { ItemStyledTypes } from "./types";
+import { NavItemStyledTypes } from "./types";
 
-const Frame = styled.div`
+const Container = styled.div`
     display: flex;
     justify-content: center;
 `;
 
-const Item = styled(Link)<ItemStyledTypes>`
+const Item = styled(Link)<NavItemStyledTypes>(({ $hover }) => `
     display: flex;
     height: 20px;
     padding: 12px;
@@ -20,34 +20,33 @@ const Item = styled(Link)<ItemStyledTypes>`
     text-decoration: none;
     transition: 400ms;
 
-    ${({$hover}) => $hover && `
-        color: #00CE78;
-        background-color: rgba(0,206,120, 0.1);
+    ${$hover && `
+        color: var(--green-300);
+        background-color: var(--green-highlight);
     `}
-`;
+`);
 
-const SubFrame = styled.div<ItemStyledTypes>`
+const SubContainer = styled.div<NavItemStyledTypes>(({ $hover }) => `
     display: flex;
     visibility: hidden;
     flex-direction: column;
     row-gap: 8px;
     position: absolute;
     top: 88px;
-    border: solid 2px #2B2B2B;
-    background-color: #1A1A1A;
+    border: solid 2px var(--grey-400);
+    background-color: var(--grey-100);
     transition: 200ms;
     transition-delay: 500ms;
-    transform: scaleY(0);
+    transform: scale(0);
     transform-origin: top;
-    
 
-    ${({$hover}) => $hover && `
-        transition-delay: 0ms;
-        transform: scaleY(1);
+    ${$hover && `
         visibility: visible;
+        transition-delay: 0ms;
+        transform: scale(1);
     `}
     
-`;
+`);
 
 const SubItem = styled(Link)`
     display: flex;
@@ -60,8 +59,8 @@ const SubItem = styled(Link)`
     text-decoration: none;
 
     &:hover {
-        background-color: rgba(255,255,255, 0.1);
+        background-color: var(--grey-highlight);
     }
 `;
 
-export { Frame, Item, SubFrame, SubItem }
+export { Container, Item, SubContainer, SubItem }

@@ -5,6 +5,6 @@ export interface NavItemTypes {
     subItems?: NavItemTypes[];
 }
 
-export interface ItemStyledTypes {
+export interface NavItemStyledTypes {
     $hover: boolean;
 }
