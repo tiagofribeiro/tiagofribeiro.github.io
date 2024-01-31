@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {
-  distDir: 'dist',
+const nextConfig = {
+  output: 'export',
   compiler: {
     styledComponents: true,
   },
 }
+
+export default nextConfig;
