@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
-import StyledComponentsRegistry from './lib/global/registry'
-import { GlobalStyles } from './lib/global/styles'
+import StyledComponentsRegistry from '@/app/_lib/global/registry'
 
 const font = Montserrat({ subsets: ['latin'] })
 
@@ -16,7 +15,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html className={font.className}>
       <body>
         <StyledComponentsRegistry>
-          <GlobalStyles />
           {children}
         </StyledComponentsRegistry>
       </body>

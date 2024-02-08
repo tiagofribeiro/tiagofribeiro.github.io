@@ -74,7 +74,7 @@ const Body = styled.span<TextBodyTypes>(({
     font-size: ${$primary ? '16' : '14'}px;
     font-weight: ${$bold ? 700 : 400};
     
-    ${$fontSize && `font-size: ${$fontSize}px;`}
+    ${$fontSize && `font-size: ${$fontSize}px`};
     ${$color && `color: ${$color}`};
 
     @media screen and (max-width: 768px) {

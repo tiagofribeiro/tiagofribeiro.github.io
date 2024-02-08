@@ -1,9 +1,11 @@
-import Header from "./ui/organisms/Header";
+import { GlobalStyles } from "@/app/_lib/global/styles";
+import Header from "./_ui/organisms/Header";
 
 const RootTemplate = ({ children }: { children: React.ReactNode }) => {
     return (
         // Context
         <>
+            <GlobalStyles />
             <Header />
             {children}
         </>

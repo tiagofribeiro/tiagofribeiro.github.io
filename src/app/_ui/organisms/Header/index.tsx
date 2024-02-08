@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { MENU_ITEMS } from "@/app/lib/constants/routes";
+import { MENU_ITEMS } from "@/app/_lib/constants/routes";
 
 import { Container } from "./style"
 import NavMenu from "../../molecules/NavMenu";
