@@ -13,7 +13,7 @@ import List from "./_ui/atoms/List";
 
 const getProjects = async (): Promise<Project[]> => {
   try {
-    const res = await fetch("http://localhost:3000/api/Projects");
+    const res = await fetch("https://tiagofribeiro.github.io/api/Projects");
 
     if (res.status == 500) {
       throw 'Não foi possível recuperar os dados no momento.'
