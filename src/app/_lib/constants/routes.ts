@@ -1,4 +1,4 @@
-import { NavItemTypes } from "@/app/ui/molecules/NavItem/types";
+import { NavItemTypes } from "@/app/_ui/molecules/NavItem/types";
 
 const ABOUT_ITEMS: NavItemTypes[] = [
     {
