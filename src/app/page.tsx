@@ -3,6 +3,9 @@ import Link from "next/link";
 import { HOME_TEXT } from "@/app/_lib/constants/strings/home";
 import { ICONS, ICONS_STACK } from "@/app/_lib/constants/icons";
 import { URLS } from "@/app/_lib/constants/strings/urls";
+import { HOME_TEXT } from "@/app/_lib/constants/strings/home";
+import { ICONS, ICONS_STACK } from "@/app/_lib/constants/icons";
+import { URLS } from "@/app/_lib/constants/strings/urls";
 
 import { CardDescription, CardImage, Container, Section } from "./style"
 import { Project } from "./_models/project";
