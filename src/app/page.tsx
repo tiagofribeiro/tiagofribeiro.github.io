@@ -3,6 +3,9 @@ import Link from "next/link";
 import { HOME_TEXT } from "@/app/_lib/constants/strings/home";
 import { ICONS, ICONS_STACK } from "@/app/_lib/constants/icons";
 import { URLS } from "@/app/_lib/constants/strings/urls";
+import { HOME_TEXT } from "@/app/_lib/constants/strings/home";
+import { ICONS, ICONS_STACK } from "@/app/_lib/constants/icons";
+import { URLS } from "@/app/_lib/constants/strings/urls";
 
 import { CardDescription, CardImage, Container, Section } from "./style"
 import { Project } from "./_models/project";
@@ -26,14 +29,14 @@ const getProjects = async (): Promise<Project[]> => {
 };
 
 const SKILLS = [
-  <ICONS_STACK.html />,
-  <ICONS_STACK.js />,
-  <ICONS_STACK.react />,
-  <ICONS_STACK.flutter />,
-  <ICONS_STACK.python />,
-  <ICONS_STACK.csharp />,
-  <ICONS_STACK.sqlite />,
-  <ICONS_STACK.mongo />,
+  <ICONS_STACK.html key={'html'}/>,
+  <ICONS_STACK.js key={'js'}/>,
+  <ICONS_STACK.react key={'react'}/>,
+  <ICONS_STACK.flutter key={'flutter'}/>,
+  <ICONS_STACK.python key={'python'}/>,
+  <ICONS_STACK.csharp key={'csharp'}/>,
+  <ICONS_STACK.sqlite key={'sqlite'}/>,
+  <ICONS_STACK.mongo key={'mongo'}/>,
 ]
 
 const Home = () => {
