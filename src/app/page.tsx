@@ -26,14 +26,14 @@ const getProjects = async (): Promise<Project[]> => {
 };
 
 const SKILLS = [
-  <ICONS_STACK.html />,
-  <ICONS_STACK.js />,
-  <ICONS_STACK.react />,
-  <ICONS_STACK.flutter />,
-  <ICONS_STACK.python />,
-  <ICONS_STACK.csharp />,
-  <ICONS_STACK.sqlite />,
-  <ICONS_STACK.mongo />,
+  <ICONS_STACK.html key={'html'}/>,
+  <ICONS_STACK.js key={'js'}/>,
+  <ICONS_STACK.react key={'react'}/>,
+  <ICONS_STACK.flutter key={'flutter'}/>,
+  <ICONS_STACK.python key={'python'}/>,
+  <ICONS_STACK.csharp key={'csharp'}/>,
+  <ICONS_STACK.sqlite key={'sqlite'}/>,
+  <ICONS_STACK.mongo key={'mongo'}/>,
 ]
 
 const Home = () => {
