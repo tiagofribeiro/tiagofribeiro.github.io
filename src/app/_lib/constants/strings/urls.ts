@@ -7,4 +7,4 @@ const URLS: UrlsTypes = {
     linkedin: "https://www.linkedin.com/in/tiago-fernandes-ribeiro/",
 }
 
-export default URLS;
+export {URLS};

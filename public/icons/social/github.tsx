@@ -1,6 +1,6 @@
 import { SVGProps } from "react"
 
-const GithubSvg = (props: SVGProps<SVGSVGElement>) =>
+const GithubIcon = (props: SVGProps<SVGSVGElement>) =>
     <svg
         width="32"
         height="32"
@@ -16,4 +16,4 @@ const GithubSvg = (props: SVGProps<SVGSVGElement>) =>
     </svg>
 
 
-export default GithubSvg
+export default GithubIcon

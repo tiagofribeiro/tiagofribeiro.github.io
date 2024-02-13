@@ -1,15 +1,15 @@
 import Link from "next/link";
 
 import { HOME_TEXT } from "@/app/_lib/constants/strings/home";
-import ICONS from "@/app/_lib/constants/assets/icons";
-import URLS from "@/app/_lib/constants/strings/urls";
+import { ICONS, ICONS_STACK } from "@/app/_lib/constants/icons";
+import { URLS } from "@/app/_lib/constants/strings/urls";
 
 import { CardDescription, CardImage, Container, Section } from "./style"
 import { Project } from "./_models/project";
 import Frame from "./_ui/atoms/Frame";
 import Text from "./_ui/atoms/Text";
 import Card from "./_ui/atoms/Card";
-import FlexibleList from "./_ui/molecules/FlexibleList";
+import List from "./_ui/atoms/List";
 
 const getProjects = async (): Promise<Project[]> => {
   try {
@@ -24,6 +24,17 @@ const getProjects = async (): Promise<Project[]> => {
     return [];
   }
 };
+
+const SKILLS = [
+  <ICONS_STACK.html />,
+  <ICONS_STACK.js />,
+  <ICONS_STACK.react />,
+  <ICONS_STACK.flutter />,
+  <ICONS_STACK.python />,
+  <ICONS_STACK.csharp />,
+  <ICONS_STACK.sqlite />,
+  <ICONS_STACK.mongo />,
+]
 
 const Home = () => {
   return (
@@ -60,7 +71,7 @@ const Presentation = () =>
     <Text primary marginY={40}>
       {HOME_TEXT.sub}
     </Text>
-    <FlexibleList gapX={12}>
+    <List gapX={12}>
       <Link
         href={URLS.github}
         target="_blank"
@@ -75,7 +86,7 @@ const Presentation = () =>
       >
         <ICONS.linkedin width={32} height={32} />
       </Link>
-    </FlexibleList>
+    </List>
   </Section>
 
 
@@ -93,10 +104,14 @@ const Projects = async () => {
         >_
         </Text>
       </Text>
-      <FlexibleList direction={'column'} marginY={40} gapY={40}>
+      <List
+        direction={'column'}
+        marginY={40}
+        gapY={40}
+      >
         {projects.map((item, index) => {
           return (
-            <Card>
+            <Card key={index}>
               <CardDescription>
                 <Text bold fontSize={32}>
                   {item.title}
@@ -108,7 +123,7 @@ const Projects = async () => {
             </Card>
           )
         })}
-      </FlexibleList>
+      </List>
     </Section>
   )
 }
@@ -123,6 +138,13 @@ const Skills = () =>
         color={'var(--green-300)'}
       >_
       </Text>
+      <List marginY={40} gapX={40}>
+        {SKILLS.map((item, index) =>
+          <div key={index}>
+            {item}
+          </div>
+        )}
+      </List>
     </Text>
   </Section>
 

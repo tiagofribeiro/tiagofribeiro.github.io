@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import ICONS from "@/app/_lib/constants/assets/icons";
+import { ICONS } from "@/app/_lib/constants/icons";
 
 import { Container, Item, SubContainer, SubItem } from "./style"
 import Text from "../../atoms/Text";

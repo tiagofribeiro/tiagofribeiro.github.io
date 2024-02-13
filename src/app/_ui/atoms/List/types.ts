@@ -1,4 +1,4 @@
-export interface FlexibleListTypes {
+export interface ListTypes {
     gapX?: number;
     gapY?: number;
     marginX?: number;
@@ -7,7 +7,7 @@ export interface FlexibleListTypes {
     children: React.ReactNode;
 }
 
-export interface FlexibleListStyledTypes {
+export interface ListStyledTypes {
     $gapX?: number;
     $gapY?: number;
     $marginX?: number;

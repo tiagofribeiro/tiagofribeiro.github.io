@@ -1,5 +1,5 @@
-import * as React from "react"
 import { SVGProps } from "react"
+
 const MenuIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="1em"

@@ -8,6 +8,7 @@ const Container = styled.div`
     justify-content: center;
     border-bottom: solid 2px var(--green-300);
     background-color: var(--grey-100);
+    z-index: 2;
 `;
 
 export { Container }

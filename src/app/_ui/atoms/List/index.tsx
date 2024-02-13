@@ -1,14 +1,14 @@
 import { Container } from "./style";
-import { FlexibleListTypes } from "./types";
+import { ListTypes } from "./types";
 
-const FlexibleList = ({
+const List = ({
     gapX,
     gapY,
     marginX,
     marginY,
     direction,
     children
-}: FlexibleListTypes) => {
+}: ListTypes) => {
     return (
         <Container
             $gapX={gapX}
@@ -22,4 +22,4 @@ const FlexibleList = ({
     );
 }
 
-export default FlexibleList;
+export default List;

@@ -13,6 +13,7 @@ const Section = styled.section`
     flex: 1;
     flex-direction: column;
     margin-bottom: 80px;
+    z-index: 1;
 `;
 
 const CardDescription = styled.div`

@@ -2,9 +2,9 @@
 
 import styled from "styled-components";
 
-import { FlexibleListStyledTypes } from "./types";
+import { ListStyledTypes } from "./types";
 
-const Container = styled.div<FlexibleListStyledTypes>(({
+const Container = styled.div<ListStyledTypes>(({
     $gapX,
     $gapY,
     $marginX = 0,
