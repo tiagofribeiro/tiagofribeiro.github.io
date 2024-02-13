@@ -1,13 +1,40 @@
 import Link from "next/link";
 
-import { HOME_TEXT } from "@/app/lib/constants/strings/home";
-import ICONS from "@/app/lib/constants/assets/icons";
-import URLS from "@/app/lib/constants/strings/urls";
+import { HOME_TEXT } from "@/app/_lib/constants/strings/home";
+import { ICONS, ICONS_STACK } from "@/app/_lib/constants/icons";
+import { URLS } from "@/app/_lib/constants/strings/urls";
 
-import { Container, Section } from "./style"
-import Frame from "./ui/atoms/Frame";
-import Text from "./ui/atoms/Text";
-import FlexibleList from "./ui/molecules/FlexibleList";
+import { CardDescription, CardImage, Container, Section } from "./style"
+import { Project } from "./_models/project";
+import Frame from "./_ui/atoms/Frame";
+import Text from "./_ui/atoms/Text";
+import Card from "./_ui/atoms/Card";
+import List from "./_ui/atoms/List";
+
+const getProjects = async (): Promise<Project[]> => {
+  try {
+    const res = await fetch("http://localhost:3000/api/Projects");
+
+    if (res.status == 500) {
+      throw 'Não foi possível recuperar os dados no momento.'
+    }
+
+    return res.json();
+  } catch (error) {
+    return [];
+  }
+};
+
+const SKILLS = [
+  <ICONS_STACK.html />,
+  <ICONS_STACK.js />,
+  <ICONS_STACK.react />,
+  <ICONS_STACK.flutter />,
+  <ICONS_STACK.python />,
+  <ICONS_STACK.csharp />,
+  <ICONS_STACK.sqlite />,
+  <ICONS_STACK.mongo />,
+]
 
 const Home = () => {
   return (
@@ -25,6 +52,7 @@ const Home = () => {
   )
 }
 
+// Content
 const Presentation = () =>
   <Section>
     <Text
@@ -43,12 +71,11 @@ const Presentation = () =>
     <Text primary marginY={40}>
       {HOME_TEXT.sub}
     </Text>
-    <FlexibleList gapX={12}>
+    <List gapX={12}>
       <Link
         href={URLS.github}
         target="_blank"
         rel="noopener noreferrer"
-
       >
         <ICONS.github width={32} height={32} />
       </Link>
@@ -59,11 +86,13 @@ const Presentation = () =>
       >
         <ICONS.linkedin width={32} height={32} />
       </Link>
-    </FlexibleList>
+    </List>
   </Section>
 
 
-const Projects = () => {
+const Projects = async () => {
+  const projects = await getProjects();
+
   return (
     <Section>
       <Text title as={'h3'}>
@@ -75,24 +104,48 @@ const Projects = () => {
         >_
         </Text>
       </Text>
+      <List
+        direction={'column'}
+        marginY={40}
+        gapY={40}
+      >
+        {projects.map((item, index) => {
+          return (
+            <Card key={index}>
+              <CardDescription>
+                <Text bold fontSize={32}>
+                  {item.title}
+                </Text>
+                <Text>{item.description}</Text>
+                <Link style={{ color: 'var(--green-300)' }} href={item.urls.website}><Text>{item.urls.website}</Text></Link>
+              </CardDescription>
+              <CardImage>(Imagem)</CardImage>
+            </Card>
+          )
+        })}
+      </List>
     </Section>
   )
 }
 
-const Skills = () => {
-  return (
-    <Section>
-      <Text title as={'h3'}>
-        {HOME_TEXT.title2}
-        <Text
-          bold
-          fontSize={32}
-          color={'var(--green-300)'}
-        >_
-        </Text>
+const Skills = () =>
+  <Section>
+    <Text title as={'h3'}>
+      {HOME_TEXT.title2}
+      <Text
+        bold
+        fontSize={32}
+        color={'var(--green-300)'}
+      >_
       </Text>
-    </Section>
-  )
-}
+      <List marginY={40} gapX={40}>
+        {SKILLS.map((item, index) =>
+          <div key={index}>
+            {item}
+          </div>
+        )}
+      </List>
+    </Text>
+  </Section>
 
 export default Home;
