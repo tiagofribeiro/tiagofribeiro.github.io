@@ -11,6 +11,8 @@ import Text from "./_ui/atoms/Text";
 import Card from "./_ui/atoms/Card";
 import List from "./_ui/atoms/List";
 
+export const dynamic = "force-dynamic"; 
+
 const getProjects = async (): Promise<Project[]> => {
   try {
     const url = process.env.NEXT_PUBLIC_ROUTE_PROJECTS ?? 'http://localhost:3000/api/Projects';

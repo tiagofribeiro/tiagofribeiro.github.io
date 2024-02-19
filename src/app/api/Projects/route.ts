@@ -1,12 +1,12 @@
-
 import { collection, getDocs } from "firebase/firestore";
 
 import { Project } from "@/app/_models/project";
 
 import { getDb } from "../connection";
 
+export const dynamic = "force-dynamic"; 
 
-export const GET = async () => {
+export const GET = async (request: Request) => {
     const projects: Project[] = [];
 
     try {
