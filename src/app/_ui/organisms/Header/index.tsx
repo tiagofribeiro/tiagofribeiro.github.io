@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { MENU_ITEMS } from "@/app/_lib/constants/routes";
+import Logo from "../../../../../public/logo.svg";
 
 import { Container } from "./style"
 import NavMenu from "../../molecules/NavMenu";
@@ -20,7 +21,7 @@ const Header = () => {
                         priority
                         width={120}
                         height={32}
-                        src={'./logo.svg'}
+                        src={Logo}
                         alt={'Logo'}
                     />
                 </Link>

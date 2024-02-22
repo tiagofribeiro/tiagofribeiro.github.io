@@ -1,12 +1,12 @@
-interface HomeTextTypes {
-    [key: string]: string | string[];
+interface TextTypes {
+    [key: string]: string;
 }
 
-const HOME_TEXT: HomeTextTypes = {
+const HOME_TEXT: TextTypes = {
     main: "Olá, eu sou o Tiago",
-    sub: "Um dev que gosta de programar um monte de coisa. \nSite em desenvolvimento.",
+    sub: `Um dev que gosta de programar um monte de coisa. \nSite em desenvolvimento.`,
     title1: "Projetos",
-    title2: "Skills",
+    title2: "Stack",
     title3: "Experiências",
     subtitle3: "Minha trajetória profissional ao longo dos últimos 10 anos.",
     title4: "Fala comigo :P",
@@ -17,4 +17,9 @@ const HOME_TEXT: HomeTextTypes = {
     linkedin: "/in/tiago-fernandes-ribeiro",
 };
 
-export { HOME_TEXT }
+const URLS: TextTypes = {
+    github: "https://github.com/tiagofribeiro/",
+    linkedin: "https://www.linkedin.com/in/tiago-fernandes-ribeiro/",
+}
+
+export { HOME_TEXT, URLS };

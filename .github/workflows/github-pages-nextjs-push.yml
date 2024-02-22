@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy Next.js site to Pages on push (master)
 
 on:
   # Runs on pushes targeting the default branch

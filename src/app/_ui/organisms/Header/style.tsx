@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.header`
     display: flex;
     height: 88px;
     justify-content: center;
