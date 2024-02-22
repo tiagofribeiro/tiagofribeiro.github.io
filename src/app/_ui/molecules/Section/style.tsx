@@ -2,10 +2,12 @@
 
 import styled from "styled-components";
 
-const Container = styled.main`
+const Container = styled.section`
     display: flex;
     flex: 1;
-    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+    z-index: 1;
 `;
 
 export { Container }
