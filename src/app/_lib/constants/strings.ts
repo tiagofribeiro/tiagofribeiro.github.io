@@ -4,7 +4,7 @@ interface TextTypes {
 
 const HOME_TEXT: TextTypes = {
     main: "Olá, eu sou o Tiago",
-    sub: `Um dev que gosta de programar um monte de coisa. \nSite em desenvolvimento.`,
+    sub: "Desenvolvedor front-end e mobile (e ocasionalmente back-end).",
     title1: "Projetos",
     title2: "Stack",
     title3: "Experiências",
@@ -13,11 +13,13 @@ const HOME_TEXT: TextTypes = {
     subtitle4: "Se você tiver algo para me dizer, sinta-se à vontade enviar uma mensagem.",
     footer1: "TGFR_ 2024",
     footer2: "Código feito no Visual Studio Code e design no Figma \nDesenvolvido com Next.js",
+    mail: "tg.frnds",
     github: "/tiagofribeiro",
     linkedin: "/in/tiago-fernandes-ribeiro",
 };
 
 const URLS: TextTypes = {
+    mail: "mailto:tg.frnds@outlook.com",
     github: "https://github.com/tiagofribeiro/",
     linkedin: "https://www.linkedin.com/in/tiago-fernandes-ribeiro/",
 }

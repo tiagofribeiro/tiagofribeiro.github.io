@@ -11,6 +11,7 @@ const SKILLS = [
     <ICONS_STACK.csharp key={'csharp'} width={60} height={60} />,
     <ICONS_STACK.sqlite key={'sqlite'} width={60} height={60} />,
     <ICONS_STACK.mongo key={'mongo'} width={60} height={60} />,
+    <ICONS_STACK.firebase key={'firebase'} width={60} height={60} />,
 ]
 
 const SkillsList = async () => {

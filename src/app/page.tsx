@@ -12,8 +12,7 @@ import Loading from "./_ui/atoms/Loading";
 import Section from "./_ui/molecules/Section";
 import ProjectsList from "./_ui/dynamic/ProjectsList";
 import SkillsList from "./_ui/dynamic/SkillsList";
-
-export const dynamic = "force-dynamic";
+import ContactCard from "./_ui/molecules/ContactCard";
 
 const Home = () => {
     return (
@@ -26,6 +25,7 @@ const Home = () => {
                 <Presentation />
                 <Projects />
                 <Skills />
+                <Contact />
             </Frame>
         </Container>
     )
@@ -56,19 +56,21 @@ const Presentation = () =>
     </Section>
 
 
-const Projects = () => {
-    return (
-        <Section title={HOME_TEXT.title1}>
-            <Suspense fallback={<Loading type={'projects'} />}>
-                <ProjectsList />
-            </Suspense>
-        </Section>
-    )
-}
+const Projects = () =>
+    <Section title={HOME_TEXT.title1}>
+        <Suspense fallback={<Loading type={'projects'} />}>
+            <ProjectsList />
+        </Suspense>
+    </Section>
 
 const Skills = () =>
     <Section title={HOME_TEXT.title2}>
         <SkillsList />
+    </Section>
+
+const Contact = () =>
+    <Section>
+        <ContactCard />
     </Section>
 
 export default Home;

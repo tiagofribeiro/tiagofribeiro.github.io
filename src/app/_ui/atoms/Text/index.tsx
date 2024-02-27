@@ -22,7 +22,8 @@ const Text = ({
       $marginY={marginY}
       $alignment={alignment}
       $color={color}>
-      {children}</Header>
+      {children}
+    </Header>
     :
     <Body
       $bold={bold}
@@ -33,7 +34,8 @@ const Text = ({
       $alignment={alignment}
       $fontSize={fontSize}
       $color={color}>
-      {children}</Body>
+      {children}
+    </Body>
 }
 
 export default Text;

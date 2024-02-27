@@ -1,23 +1,32 @@
 'use client'
 
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+import { CardStyledTypes } from "./types";
 
-const appearAnimation = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`;
-
-const Container = styled.div`
+const Container = styled.div<CardStyledTypes>(({
+    $gapX,
+    $gapY,
+    $paddingX = 0,
+    $paddingY = 0,
+    $bgColor = `var(--grey-300)`,
+}) => `
     display: flex;
-    height: 300px;
-    border-radius: 20px;
+    ${$gapX && `column-gap: ${$gapX}px`};
+    ${$gapY && `row-gap: ${$gapY}px`};
+    padding: ${$paddingY}px ${$paddingX}px;
     align-items: center;
-    background-color: var(--grey-300);
-    animation: ${appearAnimation} 400ms linear forwards;
-`;
+    border-radius: 20px;
+    background-color: ${$bgColor};
+    animation: appearAnimation 400ms linear forwards;
+
+    @keyframes appearAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+`);
 
 export { Container }

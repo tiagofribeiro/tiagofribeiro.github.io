@@ -9,7 +9,7 @@ const Section = ({ title, main, children }: SectionTypes) => {
                 <Text 
                     title 
                     as={main ? 'h1' : 'h3'}
-                    maxW={main ? 40 : 100}>
+                    maxW={main ? 50 : 100}>
                     {title}
                     <Text
                         bold

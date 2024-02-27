@@ -1,14 +1,16 @@
 import Link from "next/link";
 
 import { getProjects } from "@/app/api/Projects/service";
+import { asyncProjects } from "@/app/_lib/tests/mock-projects";
 
-import { CardDescription, CardImage } from "./style";
+import { ProjectDescription, ProjectPreview } from "./style";
 import List from "../../atoms/List";
 import Card from "../../atoms/Card";
 import Text from "../../atoms/Text";
 
 const ProjectsList = async () => {
     const projects = await getProjects();
+    // const projects = await asyncProjects();
 
     return (
         <List
@@ -19,7 +21,7 @@ const ProjectsList = async () => {
             {projects.map((item, index) => {
                 return (
                     <Card key={index}>
-                        <CardDescription>
+                        <ProjectDescription>
                             <Text bold fontSize={32}>
                                 {item.title}
                             </Text>
@@ -32,8 +34,8 @@ const ProjectsList = async () => {
                                     {item.urls.website}
                                 </Text>
                             </Link>
-                        </CardDescription>
-                        <CardImage>(Imagem)</CardImage>
+                        </ProjectDescription>
+                        <ProjectPreview>(Imagem)</ProjectPreview>
                     </Card>
                 )
             })}

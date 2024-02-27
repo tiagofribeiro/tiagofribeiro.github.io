@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-const CardDescription = styled.div`
+const ProjectDescription = styled.div`
     display: flex;
     flex: 4;
     flex-direction: column;
@@ -10,14 +10,14 @@ const CardDescription = styled.div`
     margin: 40px;
 `;
 
-const CardImage = styled.div`
+const ProjectPreview = styled.div`
     display: flex;
     flex: 3;
-    height: 100%;
+    height: 300px;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     background-color: var(--grey-400);
 `;
 
-export { CardDescription, CardImage }
+export { ProjectDescription, ProjectPreview }

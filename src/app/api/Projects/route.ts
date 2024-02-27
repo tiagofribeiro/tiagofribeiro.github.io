@@ -22,11 +22,8 @@ export const GET = async () => {
         }
 
         return Response.json(projects, { status: 200 });
-    } catch (err) {
-        if (err instanceof Error) {
-            err = err.message;
-        }
-
-        return Response.json({ message: "ERROR: " + err }, { status: 500 });
+    } catch (error) {
+        const message = error instanceof Error ? error.message : "Unknown error"
+        return Response.json({ message: "ERROR: " + message }, { status: 500 });
     }
 }  
