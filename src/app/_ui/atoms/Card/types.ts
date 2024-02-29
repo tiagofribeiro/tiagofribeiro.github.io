@@ -1,5 +1,6 @@
 export interface CardTypes {
     children: React.ReactNode;
+    onClick?: () => {}
     gapX?: number;
     gapY?: number;
     paddingX?: number;

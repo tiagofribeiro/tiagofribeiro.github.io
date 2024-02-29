@@ -13,6 +13,7 @@ import Section from "./_ui/molecules/Section";
 import ProjectsList from "./_ui/dynamic/ProjectsList";
 import SkillsList from "./_ui/dynamic/SkillsList";
 import ContactCard from "./_ui/molecules/ContactCard";
+import ExperiencesCard from "./_ui/molecules/ExperiencesCard";
 
 const Home = () => {
     return (
@@ -25,6 +26,7 @@ const Home = () => {
                 <Presentation />
                 <Projects />
                 <Skills />
+                <Experiences />
                 <Contact />
             </Frame>
         </Container>
@@ -66,6 +68,11 @@ const Projects = () =>
 const Skills = () =>
     <Section title={HOME_TEXT.title2}>
         <SkillsList />
+    </Section>
+
+const Experiences = () => 
+    <Section>
+        <ExperiencesCard />
     </Section>
 
 const Contact = () =>
