@@ -7,7 +7,7 @@ const ProjectDescription = styled.div`
     flex: 4;
     flex-direction: column;
     row-gap: 20px;
-    margin: 40px;
+    padding: 40px;
 `;
 
 const ProjectPreview = styled.div`
@@ -16,8 +16,11 @@ const ProjectPreview = styled.div`
     height: 300px;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    background-color: var(--grey-400);
 `;
 
-export { ProjectDescription, ProjectPreview }
+const PreviewImage = styled.img`
+    height: 100%;
+    border-radius: 20px;
+`;
+
+export { ProjectDescription, ProjectPreview, PreviewImage }

@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <Container>
             <Frame
-                paddingX={24}
+                marginX={24}
                 align={'center'}
                 justify={'space-between'}
             >

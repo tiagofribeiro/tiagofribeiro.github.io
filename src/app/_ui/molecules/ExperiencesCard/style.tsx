@@ -6,7 +6,7 @@ const ExperiencesDescription = styled.div`
     display: flex;
     flex-direction: column;
     flex: 4;
-    margin: 40px;
+    padding: 40px;
 `;
 
 const ExperiencesPreview = styled.div`
@@ -17,4 +17,8 @@ const ExperiencesPreview = styled.div`
     justify-content: center;
 `;
 
-export { ExperiencesDescription, ExperiencesPreview }
+const ExperiencesImage = styled.img`
+    height: 100%;
+`;
+
+export { ExperiencesDescription, ExperiencesPreview, ExperiencesImage }

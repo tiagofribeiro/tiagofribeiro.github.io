@@ -4,7 +4,7 @@ interface TextTypes {
 
 const HOME_TEXT: TextTypes = {
     main: "Olá, eu sou o Tiago",
-    sub: "Desenvolvedor front-end e mobile (e ocasionalmente back-end).",
+    sub: "Desenvolvedor front-end e mobile (e muitas vezes back-end).",
     title1: "Projetos",
     title2: "Stack",
     title3: "Experiências ",

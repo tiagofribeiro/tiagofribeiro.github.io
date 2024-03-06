@@ -1,12 +1,19 @@
-import { HOME_TEXT } from "@/app/_lib/constants/strings";
+'use client'
 
+import { useRouter } from "next/navigation";
+
+import { HOME_TEXT } from "@/app/_lib/constants/strings";
+import { IMAGES } from "@/app/_lib/constants/images";
+
+import { ExperiencesDescription, ExperiencesImage, ExperiencesPreview } from "./style";
 import Card from "../../atoms/Card";
 import Text from "../../atoms/Text";
-import { ExperiencesDescription, ExperiencesPreview } from "./style";
 
 const ExperiencesCard = () => {
+    const router = useRouter();
+
     return (
-        <Card bgColor={'var(--grey-100)'}>
+        <Card hasClick onClick={() => router.push('/about/experience')} bgColor={'var(--grey-100)'}>
             <ExperiencesDescription>
                 <Text
                     title
@@ -26,7 +33,7 @@ const ExperiencesCard = () => {
                 </Text>
             </ExperiencesDescription>
             <ExperiencesPreview>
-                (Imagem)
+                <ExperiencesImage src={IMAGES.experiences.src} />
             </ExperiencesPreview>
         </Card>
     );

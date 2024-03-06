@@ -6,7 +6,7 @@
 
 <br>
 
-Website with some information about myself, click [here](https://tiagofribeiro.github.io) to access it.
+Website with some information about myself, click [here](https://tgfr.com.br) to access it.
 
 (OBS: Por enquanto, disponível apenas em portugês! :brazil: )  
 
@@ -21,6 +21,7 @@ The project was born aiming to develop my technical skills in front-end developm
 Developed using React and Next.js (`create-next-app`).  
 The following third-party packages were used:
 
+- [firebase](https://firebase.google.com)
 - [styled-components](https://styled-components.com/)
 
 <br>
@@ -48,7 +49,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) on your browser to see the result.
+
+<br>
+
+> NOTE: You will need a few `.env` variables to run the backend. Check the API folder.
 
 <br>
 
